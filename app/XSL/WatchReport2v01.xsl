@@ -223,7 +223,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
     <xsl:with-param name="ids" select="$fullTextIDs" />
   </xsl:call-template>
 </xsl:variable>
-<xsl:variable name="xmlPath" select="string('XML/stdFullStory?story_id=')" />
+<xsl:variable name="xmlPath" select="string('/articles?story_ids=')" />
 <xsl:variable name="FTXML" select="document(concat($webroot,$xmlPath,$strAID))"/>
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 <xsl:variable name="mobileAppId" select="string('1450569477')" />
