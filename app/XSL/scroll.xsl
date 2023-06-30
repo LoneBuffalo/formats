@@ -11,7 +11,7 @@ Notes:
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:lbps="http://www.lonebuffalo.com/XSL/Functions" >
 
-  <xsl:import href="https://LB_CDN_BASE/newsletters/XSL/WatchReport2v01.xsl"/>
+  <xsl:import href="https://LB_CDN_BASE/resources/XSL/WatchReport2v01.xsl"/>
 
   <!-- ### Standard style variables #### -->
   <xsl:variable name="formatName">Breaking News Scroll</xsl:variable>

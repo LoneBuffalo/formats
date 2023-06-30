@@ -69,7 +69,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 	exclude-result-prefixes="xs xsl lbps">
 
 <!-- ######## ~ Imports #################################################### -->
-<xsl:import href="https://LB_CDN_BASE/XSL/Keywords.xsl"/>
+<xsl:import href="https://LB_CDN_BASE/resources/XSL/Keywords.xsl"/>
 
 <!-- ######## ~ Variables ~~ Standard style settings ####################### -->
 <xsl:variable name="formatName">Watch Report 2v02 Base</xsl:variable>

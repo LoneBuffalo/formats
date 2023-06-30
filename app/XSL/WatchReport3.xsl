@@ -6,7 +6,7 @@
   xmlns="http://www.w3.org/1999/xhtml"
   exclude-result-prefixes="xs xsl lbps">
 
-<xsl:import href="https://LB_CDN_BASE/XSL/Keywords.xsl" />
+<xsl:import href="https://LB_CDN_BASE/resources/XSL/Keywords.xsl" />
 
 <xsl:variable name="formatName">WatchReport3 base</xsl:variable>
 

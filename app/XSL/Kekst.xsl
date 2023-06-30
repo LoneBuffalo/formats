@@ -10,7 +10,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:lbps="http://www.lonebuffalo.com/XSL/Functions" 
 	exclude-result-prefixes="lbps xsl xs">
-<xsl:import href="https://LB_CDN_BASE/XSL/Keywords.xsl"/>
+<xsl:import href="https://LB_CDN_BASE/resources/XSL/Keywords.xsl"/>
 
 <xsl:variable name="formatName">Kekst Standard Newletter Format</xsl:variable>
 <xsl:variable name="webroot" select="/CLIPSHEET/LB_URL" />

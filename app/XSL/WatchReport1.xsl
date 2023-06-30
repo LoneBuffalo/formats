@@ -13,7 +13,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="xs xsl lbps">
 
-<xsl:import href="https://LB_CDN_BASE/XSL/Keywords.xsl"/>
+<xsl:import href="https://LB_CDN_BASE/resources/XSL/Keywords.xsl"/>
 
 <xsl:variable name="formatName">Watch Report Base</xsl:variable>
 <!-- placeholder variables below -->
