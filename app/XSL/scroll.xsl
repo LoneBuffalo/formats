@@ -11,7 +11,7 @@ Notes:
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:lbps="http://www.lonebuffalo.com/XSL/Functions" >
 
-  <xsl:import href="https://lonebuffalo.secure.footprint.net/newsletters/XSL/WatchReport2v01.xsl"/>
+  <xsl:import href="https://LB_CDN_BASE/newsletters/XSL/WatchReport2v01.xsl"/>
 
   <!-- ### Standard style variables #### -->
   <xsl:variable name="formatName">Breaking News Scroll</xsl:variable>
@@ -31,7 +31,7 @@ Notes:
     <![CDATA[No current articles found for this alert.]]>
   </xsl:variable>
   <xsl:variable name="img-url___brand-header">
-    <xsl:value-of select="string('https://lonebuffalo.secure.footprint.net/graphics/lbAlertHeader.jpg')" />
+    <xsl:value-of select="string('https://LB_CDN_BASE/graphics/lbAlertHeader.jpg')" />
   </xsl:variable>
   <xsl:variable name="date-format___header">
   	<xsl:value-of select="string('[MNn] [D1], [Y]')"/>

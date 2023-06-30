@@ -21,6 +21,10 @@ jobs:
         ssh-key: '${{ secrets.LB_SVC_ACCT }}'
         submodules: 'recursive'
 
+    - name: Set CDN
+      run: sed -i 's/LB_CDN_BASE/${{ vars.LB_CDN_BASE }}/g' *.xsl
+      shell: bash
+
     - name: deploy
       uses: 'google-github-actions/auth@v1'
       with:

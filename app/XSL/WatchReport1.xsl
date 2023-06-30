@@ -13,7 +13,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="xs xsl lbps">
 
-<xsl:import href="https://lonebuffalo.secure.footprint.net/XSL/Keywords.xsl"/>
+<xsl:import href="https://LB_CDN_BASE/XSL/Keywords.xsl"/>
 
 <xsl:variable name="formatName">Watch Report Base</xsl:variable>
 <!-- placeholder variables below -->
@@ -30,10 +30,10 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="preferSrc" select="false()" />
 <xsl:variable name="extOver" select="string('')" />
 <xsl:variable name="execSectID" select="1" />
-<xsl:variable name="brandImgURL" select="string('https://lonebuffalo.secure.footprint.net/graphics/lbNLHeader.jpg')" />
-<xsl:variable name="bottomLBBrand" select="string('https://lonebuffalo.secure.footprint.net/graphics/lbNLbottomBrand.png')" />
+<xsl:variable name="brandImgURL" select="string('https://LB_CDN_BASE/graphics/lbNLHeader.jpg')" />
+<xsl:variable name="bottomLBBrand" select="string('https://LB_CDN_BASE/graphics/lbNLbottomBrand.png')" />
 <xsl:variable name="defaultCopyright">
-    <![CDATA[<img src="https://lonebuffalo.secure.footprint.net/graphics/DJbranding.png" align="right">]]>
+    <![CDATA[<img src="https://LB_CDN_BASE/graphics/DJbranding.png" align="right">]]>
 </xsl:variable>
 <xsl:variable name="boilerplate">
     <![CDATA[Content in this newsletter is for your use only and may not be republished.]]>
@@ -69,10 +69,10 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="bgcolor" select="string('#e6e6e6')" />
 <xsl:variable name="bgcolorContent" select="string('#f2f2f2')" />
 <xsl:variable name="bgcolorNav" select="string('#ffffff')" />
-<xsl:variable name="linkImgURL" select="string('https://lonebuffalo.secure.footprint.net/graphics/linkout.png')" />
-<xsl:variable name="imgAud" select="string('https://lonebuffalo.secure.footprint.net/graphics/lb_audio.png')" />
-<xsl:variable name="imgVid" select="string('https://lonebuffalo.secure.footprint.net/graphics/lb_video.png')" />
-<xsl:variable name="imgPic" select="string('https://lonebuffalo.secure.footprint.net/graphics/lb_image.png')" />
+<xsl:variable name="linkImgURL" select="string('https://LB_CDN_BASE/graphics/linkout.png')" />
+<xsl:variable name="imgAud" select="string('https://LB_CDN_BASE/graphics/lb_audio.png')" />
+<xsl:variable name="imgVid" select="string('https://LB_CDN_BASE/graphics/lb_video.png')" />
+<xsl:variable name="imgPic" select="string('https://LB_CDN_BASE/graphics/lb_image.png')" />
 <xsl:variable name="styleBody" select="concat('font-family:',$fontFamily,';font-size:',$fontSize,';background-color:',$bgcolor,';color:',$colorText,';')"/>
 <xsl:variable name="styleSectionHead" select="string('font-size:2em;font-weight:bold;')" />
 <xsl:variable name="styleIssueHead" select="concat('font-size:1em;font-weight:bold;color:',$colorLink,';')" />
