@@ -22,7 +22,7 @@ jobs:
         submodules: 'recursive'
 
     - name: Set CDN
-      run: sed -i 's/LB_CDN_BASE/${{ vars.LB_CDN_BASE }}/g' *.xsl
+      run: sed -i 's/LB_CDN_BASE/${{ vars.LB_CDN_BASE }}/g' ./app/XSL/*.xsl
       shell: bash
 
     - name: deploy
