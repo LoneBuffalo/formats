@@ -1,0 +1,32 @@
+# Minimal action to mirror previous GitLab minimal CI
+name: Basic CI 
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - master
+      - development
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name }}
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref_name }}
+        ssh-key: '${{ secrets.LB_SVC_ACCT }}'
+        submodules: 'recursive'
+
+    - name: deploy
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GCP_SVC_CREDENTIALS }}'
+
+    - uses: 'google-github-actions/upload-cloud-storage@v1'
+      with:
+        path: '.'
+        destination: '${{ vars.GCP_BUCKET }}/resources'
