@@ -28,5 +28,5 @@ jobs:
 
     - uses: 'google-github-actions/upload-cloud-storage@v1'
       with:
-        path: '.'
+        path: './app/'
         destination: '${{ vars.GCP_BUCKET }}/resources'
