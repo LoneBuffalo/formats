@@ -25,19 +25,18 @@ jobs:
       run: sed -i 's/LB_CDN_BASE/${{ vars.LB_CDN_BASE }}/g' ./app/XSL/*.xsl
       shell: bash
 
-    - name: login
-      uses: 'google-github-actions/auth@v1'
-      with:
-        credentials_json: '${{ secrets.GCP_SVC_CREDENTIALS }}'
+#    - name: login
+#      uses: 'google-github-actions/auth@v1'
+#      with:
+#        credentials_json: '${{ secrets.GCP_SVC_CREDENTIALS }}'
 
     - name: deploy resources
       run: |
+        echo "${{ secrets.GCP_SVC_CREDENTIALS }}" > MY_KEY.json
+        gcloud auth activate-service-account --project=${{ vars.GCP_PROJECT_ID }} –key-file=MY_KEY.json
         gsutil cp -r ./app/. gs://${{ vars.GCP_BUCKET }}/resources
-        env:
-        SERVICE_ACCOUNT_KEY: ${{ secrets.MY_SECRET_FROM_JSON_KEY }}
-        
-
-
+#        env:
+#        SERVICE_ACCOUNT_KEY: ${{ secrets.MY_SECRET_FROM_JSON_KEY }}
 
 
 #    - uses: 'google-github-actions/upload-cloud-storage@v1'
