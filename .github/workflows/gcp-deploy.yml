@@ -31,13 +31,12 @@ jobs:
 #        credentials_json: '${{ secrets.GCP_SVC_CREDENTIALS }}'
 
     - name: deploy resources
+      env:
+        SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SVC_CREDENTIALS }}
       run: |
-        echo "${{ secrets.GCP_SVC_CREDENTIALS }}" >> MY_KEY.json
+        echo "$SERVICE_ACCOUNT_KEY" >> MY_KEY.json
         gcloud auth activate-service-account --project=${{ vars.GCP_PROJECT_ID }} --key-file="MY_KEY.json"
         gsutil cp -r ./app/. gs://${{ vars.GCP_BUCKET }}/resources
-#        env:
-#        SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SVC_CREDENTIALS }}
-
 
 #    - uses: 'google-github-actions/upload-cloud-storage@v1'
 #      with:
