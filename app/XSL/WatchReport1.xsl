@@ -85,8 +85,8 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 
 <!-- placeholder variables above -->
 
-
 <xsl:variable name="dateArgFormat" select="string('[M01]/[D01]/[Y0001]')"/>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.app/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="/CLIPSHEET/LB_URL" />
 <xsl:variable name="hostroot" select="/CLIPSHEET/MAILURL" />
 <xsl:variable name="webVersionURL" select="/CLIPSHEET/WEBVERSIONURL" />
@@ -103,8 +103,11 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
     <xsl:with-param name="ids" select="$fullTextIDs" />
   </xsl:call-template>
 </xsl:variable>
+<!--
 <xsl:variable name="xmlPath" select="string('XML/stdFullStory?story_id=')" />
 <xsl:variable name="FTXML" select="document(concat($webroot,$xmlPath,$strAID))"/>
+-->
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 
 <xsl:output method="html" indent="yes" encoding="utf-8" />
