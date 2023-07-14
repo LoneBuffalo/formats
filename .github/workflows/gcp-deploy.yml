@@ -33,7 +33,7 @@ jobs:
     - name: deploy resources
       run: |
         echo "${{ secrets.GCP_SVC_CREDENTIALS }}" >> MY_KEY.json
-        gcloud auth activate-service-account --project=${{ vars.GCP_PROJECT_ID }} -–key-file=MY_KEY.json
+        gcloud auth activate-service-account --project=${{ vars.GCP_PROJECT_ID }} --key-file=MY_KEY.json
         gsutil cp -r ./app/. gs://${{ vars.GCP_BUCKET }}/resources
 #        env:
 #        SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SVC_CREDENTIALS }}
