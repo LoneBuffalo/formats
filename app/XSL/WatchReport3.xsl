@@ -6,7 +6,7 @@
   xmlns="http://www.w3.org/1999/xhtml"
   exclude-result-prefixes="xs xsl lbps">
 
-<xsl:import href="https://LB_CDN_BASE/resources/XSL/Keywords.xsl" />
+<xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/Keywords.xsl" />
 
 <xsl:variable name="formatName">WatchReport3 base</xsl:variable>
 
@@ -125,7 +125,7 @@
 <xsl:variable name="preferSrc" select="true()" />
 <xsl:variable name="extRelated" select="false()" />
 <xsl:variable name="mediaType" select="true()" />
-<xsl:variable name="linkImgURL" select="string('https://LB_CDN_BASE/graphics/linkout.png')" />
+<xsl:variable name="linkImgURL" select="string('https://lbpscdn.lonebuffalo.com/resources/img/linkout.png')" />
 
 
 <!-- #####  variables  -  wip and unused  ##### -->
@@ -413,7 +413,7 @@
 </xsl:variable>
 
 <xsl:variable name="href-val_report-head__marquee-img-src">
-  <xsl:value-of select="string('https://LB_CDN_BASE/graphics/lbNLHeader.jpg')" />
+  <xsl:value-of select="string('https://lbpscdn.lonebuffalo.com/resources/img/lbNLHeader.jpg')" />
 </xsl:variable>
 
 <xsl:variable name="bool__marquee-as-link" select="false()" />
@@ -613,7 +613,7 @@
 	<xsl:value-of select="$disp-val__prepared-by-display" />
 </xsl:variable>
 <xsl:variable name="href-val__service-branding-img-src">
-  <xsl:value-of select="string('https://LB_CDN_BASE/graphics/lbNLbottomBrand.png')" />
+  <xsl:value-of select="string('https://lbpscdn.lonebuffalo.com/resources/img/lbNLbottomBrand.png')" />
 </xsl:variable>
 
 <xsl:variable name="attr-val_report-foot__shade-box-bg-color">
@@ -3594,7 +3594,7 @@
 </xsl:template>
 
 <xsl:variable name="href-val_fulltext__block-copyright-img-src">
-  <xsl:value-of select="string('https://LB_CDN_BASE/graphics/DJbranding.png')" />
+  <xsl:value-of select="string('https://lbpscdn.lonebuffalo.com/resources/img/DJbranding.png')" />
 </xsl:variable>
 
 <xsl:variable name="disp-val_fulltext__block-copyright-img-alt">

@@ -69,7 +69,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 	exclude-result-prefixes="xs xsl lbps">
 
 <!-- ######## ~ Imports #################################################### -->
-<xsl:import href="https://LB_CDN_BASE/resources/XSL/Keywords.xsl"/>
+<xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/Keywords.xsl"/>
 
 <!-- ######## ~ Variables ~~ Standard style settings ####################### -->
 <xsl:variable name="formatName">Watch Report 2v02 Base</xsl:variable>
@@ -120,12 +120,12 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="bgcolorNav" select="string('#ffffff')" />
 
 <!-- ######## ~ Variables ~~ Image assets ################################## -->
-<xsl:variable name="brandImgURL" select="string('https://LB_CDN_BASE/graphics/lbNLHeader.jpg')" />
-<xsl:variable name="linkImgURL" select="string('https://LB_CDN_BASE/graphics/linkout.png')" />
-<xsl:variable name="bottomLBBrand" select="string('https://LB_CDN_BASE/graphics/lbNLbottomBrand.png')" />
-<xsl:variable name="imgAud" select="string('https://LB_CDN_BASE/graphics/lb_audio.png')" />
-<xsl:variable name="imgVid" select="string('https://LB_CDN_BASE/graphics/lb_video.png')" />
-<xsl:variable name="imgPic" select="string('https://LB_CDN_BASE/graphics/lb_image.png')" />
+<xsl:variable name="brandImgURL" select="string('https://lbpscdn.lonebuffalo.com/resources/img/lbNLHeader.jpg')" />
+<xsl:variable name="linkImgURL" select="string('https://lbpscdn.lonebuffalo.com/resources/img/linkout.png')" />
+<xsl:variable name="bottomLBBrand" select="string('https://lbpscdn.lonebuffalo.com/resources/img/lbNLbottomBrand.png')" />
+<xsl:variable name="imgAud" select="string('https://lbpscdn.lonebuffalo.com/resources/img/lb_audio.png')" />
+<xsl:variable name="imgVid" select="string('https://lbpscdn.lonebuffalo.com/resources/img/lb_video.png')" />
+<xsl:variable name="imgPic" select="string('https://lbpscdn.lonebuffalo.com/resources/img/lb_image.png')" />
 
 <!-- ######## ~ Variables ~~ Text labels ################################### -->
 <xsl:variable name="mobilePrefText" select="string('mobile users may prefer this')" />
