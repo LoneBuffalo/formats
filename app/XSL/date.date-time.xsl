@@ -6,6 +6,6 @@
             extension-element-prefixes="date" 
             date:doc="http://www.exslt.org/date"
             >
-<xsl:import href="D:\clipsheet\common\XSL\date.msxsl.xsl"/>
-<xsl:import href="D:\clipsheet\common\XSL\date.xalan.xsl"/>
+<xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/date.msxsl.xsl"/>
+<xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/date.xalan.xsl"/>
 </stylesheet>

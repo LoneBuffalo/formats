@@ -559,7 +559,7 @@
   <xsl:value-of select="string('hello@lonebuffalo.com')" />
 </xsl:variable>
 <xsl:variable name="disp-val__support-email-addr_subscribe">
-  <xsl:value-of select="string('tech@lonebuffalo.com')" />
+  <xsl:value-of select="string('duty-desk@lonebuffalo.com')" />
 </xsl:variable>
 <xsl:variable name="disp-val__subscribe-display">
   <xsl:value-of select="string('Manage your subscription')" />

@@ -14,7 +14,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 	xmlns:lbps="http://www.lonebuffalo.com/XSL/Functions"
 	xmlns="http://www.w3.org/1999/xhtml"
 	exclude-result-prefixes="xs xsl lbps #default">
-<xsl:import href="https://LB_CDN_BASE/resources/XSL/Keywords.xsl"/>
+<xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/Keywords.xsl"/>
 
 <xsl:variable name="formatName">Abstracts with TOC</xsl:variable>
 <xsl:variable name="pubDateFormat" select="string('[MNn,*-3] [D1] [Y]')"/>
