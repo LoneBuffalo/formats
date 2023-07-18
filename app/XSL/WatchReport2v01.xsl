@@ -207,6 +207,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <!-- ######## ~ Variables ~~ ETC ########################################### -->
 <xsl:variable name="UAID" select="string('UA-1191451-29')" />
 <xsl:variable name="dateArgFormat" select="string('[M01]/[D01]/[Y0001]')"/>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="/CLIPSHEET/LB_URL" />
 <xsl:variable name="hostroot" select="/CLIPSHEET/MAILURL" />
 <xsl:variable name="webVersionURL" select="/CLIPSHEET/WEBVERSIONURL" />
@@ -223,8 +224,9 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
     <xsl:with-param name="ids" select="$fullTextIDs" />
   </xsl:call-template>
 </xsl:variable>
+<!-- xmlPath no longer used? -->
 <xsl:variable name="xmlPath" select="string('/articles?story_ids=')" />
-<xsl:variable name="FTXML" select="document(concat($webroot,$xmlPath,$strAID))"/>
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 <xsl:variable name="mobileAppId" select="string('1450569477')" />
 <xsl:variable name="mobileAppLink" select="string('https://apps.apple.com/us/app/dispatch-by-lone-buffalo/id1450569477')" />

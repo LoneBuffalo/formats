@@ -14,7 +14,8 @@ History:
 				xmlns:date="http://exslt.org/dates and times" 
 				extension-element-prefixes="date" 
 				>
-<xsl:import href="D:\clipsheet\common\XSL\date.date-time.xsl"/>
+<xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/date.date-time.xsl"/>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot"></xsl:variable>
 
 <xsl:variable name="tgtArticles" select="/CLIPSHEET/TARGET" />
@@ -27,7 +28,10 @@ History:
 <xsl:variable name="strAID">
 	<xsl:call-template name="make-strAID" />
 </xsl:variable>
+<!--
 <xsl:variable name="FTXML" select="document(concat($baseURL,'XML/stdFullStoryv2.xml?story_id=',$strAID))" />
+-->
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 
 <xsl:output method="xml" indent="yes" encoding="utf-8" />
 

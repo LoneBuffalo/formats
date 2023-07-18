@@ -19,6 +19,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="formatName">Abstracts with TOC</xsl:variable>
 <xsl:variable name="pubDateFormat" select="string('[MNn,*-3] [D1] [Y]')"/>
 <xsl:variable name="tocDateFormat" select="string('[MNn] [D1], [Y]')"/>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="string(/CLIPSHEET/LB_URL)" />
 <xsl:variable name="internalroot" select="string(/CLIPSHEET/MAILURL)" />
 <xsl:variable name="webVersionURL" select="string(/CLIPSHEET/WEBVERSIONURL)" />
@@ -37,7 +38,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="contact" select="string('skdk@lonebuffalo.com')"/>
 <xsl:variable name="minWidth" select="string('480px;')" />
 <xsl:variable name="width" select="string('680px;')" />
-<xsl:variable name="FTXML" select="document(concat($webroot,'?story_id=0'))"/>
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 
 <xsl:output method="xhtml" indent="yes" encoding="utf-8" omit-xml-declaration="yes"/>

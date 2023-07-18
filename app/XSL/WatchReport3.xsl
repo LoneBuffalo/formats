@@ -72,6 +72,7 @@
 <xsl:variable name="opt__google-analytics-UAID" select="string('UA-1191451-29')" />
 <xsl:variable name="opt__google-analytics-date-arg-format" select="string('[M01]/[D01]/[Y0001]')"/>
 
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="/CLIPSHEET/LB_URL" />
 <xsl:variable name="hostroot" select="/CLIPSHEET/MAILURL" />
 <xsl:variable name="webVersionURL" select="/CLIPSHEET/WEBVERSIONURL" />
@@ -94,8 +95,9 @@
   <xsl:with-param name="ids" select="$fullTextIDs" />
 </xsl:call-template>
 </xsl:variable>
+<!-- xmlPath no longer used? -->
 <xsl:variable name="xmlPath" select="string('XML/stdFullStory.xml?story_id=')" />
-<xsl:variable name="FTXML" select="document(concat($webroot,$xmlPath,$strAID))"/>
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 

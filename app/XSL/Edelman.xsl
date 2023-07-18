@@ -14,6 +14,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/Keywords.xsl"/>
 
 <xsl:variable name="formatName">Edelman Full Text</xsl:variable>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="string(/CLIPSHEET/LB_URL)" />
 <xsl:variable name="webVersionURL" select="/CLIPSHEET/WEBVERSIONURL" />
 <xsl:variable name="topStoriesLabel" select="string('Top Stories')"/>
@@ -30,7 +31,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="strAID">
 	<xsl:call-template name="make-strAID" />
 </xsl:variable>
-<xsl:variable name="FTXML" select="document(concat($webroot,'XML/stdFullStory?story_id=',$strAID))"/>
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 

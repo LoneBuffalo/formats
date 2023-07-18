@@ -16,6 +16,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/Keywords.xsl"/>
 
 <xsl:variable name="formatName">Teneo 7 (Thomas's style w/abst; brand subd)</xsl:variable>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="/CLIPSHEET/LB_URL" />
 <xsl:variable name="topStoriesLabel" select="string('Top Stories')"/>
 <xsl:variable name="dateArgFormat" select="string('[M01]/[D01]/[Y0001]')"/>
@@ -31,7 +32,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="strAID">
 	<xsl:call-template name="make-strAID" />
 </xsl:variable>
-<xsl:variable name="FTXML" select="document(concat($webroot,'XML/stdFullStory?story_id=',$strAID))"/>
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 

@@ -15,6 +15,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="NLName" select="concat(/CLIPSHEET/@CLIENT, ' ', /CLIPSHEET/@NAME)" />
 <xsl:variable name="dateFormat" select="string('[MNn] [D1], [Y]')"/>
 <xsl:variable name="timeFormat" select="string('[h]:[m01] [PN] [ZN,*-3]')"/>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="/CLIPSHEET/LB_URL" />
 <xsl:variable name="clipDate" select="if (/CLIPSHEET/LOCAL_DATE) then /CLIPSHEET/LOCAL_DATE else /CLIPSHEET/CREATE_DATE" />
 <xsl:variable name="allowedArticles" select="/CLIPSHEET/ARTICLE" />
@@ -30,7 +31,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 </xsl:variable>
 <xsl:variable name="markClass"><![CDATA[<mark class="mark">]]></xsl:variable>
 
-<xsl:variable name="FTXML" select="document(concat($webroot,'XML/stdFullStory.xml?story_id=',$strAID))"/>
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 
 <xsl:template match="/">

@@ -14,6 +14,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:import href="https://lbpscdn.lonebuffalo.com/resources/XSL/Keywords.xsl"/>
 
 <xsl:variable name="formatName">Brunswick 1 with Divisions</xsl:variable>
+<xsl:variable name="apiroot" select="concat('https://subscriber-api.lonebuffalo.com/v1/clients/',string(/CLIPSHEET/@CID),'/')" />
 <xsl:variable name="webroot" select="/CLIPSHEET/LB_URL" />
 <xsl:variable name="webVersionURL" select="/CLIPSHEET/WEBVERSIONURL" />
 <xsl:variable name="topStoriesLabel" select="string('Top Stories')"/>
@@ -34,7 +35,7 @@ $Author:: tech@lonebuffalo.com   $ : the author of the given revision
 <xsl:variable name="orderedDiv">
 	<xsl:call-template name="divOrdered" />
 </xsl:variable>
-<xsl:variable name="FTXML" select="document(concat($webroot,'XML/stdFullStory?story_id=',$strAID))"/>
+<xsl:variable name="FTXML" select="document(concat($apiroot,'/articles?story_ids=',$strAID))"/>
 <xsl:variable name="keywords" select="$FTXML/CLIPSHEET" />
 
 <xsl:output method="xhtml" indent="yes" encoding="utf-8" />
