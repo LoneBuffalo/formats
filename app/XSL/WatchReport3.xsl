@@ -1335,7 +1335,7 @@
   <xsl:variable name="gaEC" select="encode-for-uri($disp-val__client-name)" />
   <xsl:variable name="gaEL" select="format-date(xs:date(substring($xml__clip-date,1,10)), $opt__google-analytics-date-arg-format,'en',(),())" />
   <xsl:variable name="gaCS" select="encode-for-uri($disp-val__client-name)" />
-  <img src="https://www.google-analytics.com/collect?v=1&amp;tid={$UAID}&amp;cid={$gaCID}&amp;t=event&amp;ec={$gaEC}&amp;ea={$gaEA}&amp;el={$gaEL}&amp;ni=1&amp;sc=start" width="0" height="0" />
+  <img src="https://www.google-analytics.com/collect?v=1&amp;tid={$UAID}&amp;cid={$gaCID}&amp;t=event&amp;ec={$gaEC}&amp;ea={$gaEA}&amp;el={$gaEL}&amp;ni=1&amp;sc=start" width="0" height="0" alt="Google Analytics" />
 </xsl:template>
 
 
