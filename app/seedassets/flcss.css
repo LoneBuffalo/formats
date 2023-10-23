@@ -1,0 +1,6 @@
+﻿html {overflow: hidden;}
+body{ margin:0;width:100%;height:100%;}
+#banner{ height:90px;}
+#nav{padding:0; position:absolute;top:90px;left:10px;bottom:10px;overflow:auto;width:200px;}
+#content{padding:0;margin:0;position:absolute;top:90px;left:220px;right:10px;bottom:10px;overflow:auto;}
+#footer{ clear:both;}

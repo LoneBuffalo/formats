@@ -1,0 +1,3 @@
+﻿#nav{height:expression(document.body.clientHeight-90); /*banner height + top & bottom border */}
+#content{height:expression(document.body.clientHeight-90); /*banner height + top & bottom border */
+width:expression(document.body.clientWidth-230); /*banner width + side border */}
